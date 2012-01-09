@@ -29,7 +29,7 @@
 		FA00DC1A14BB1A5D00AF7E0F /* NSObjectMethodsList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSObjectMethodsList; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA00DC1E14BB1A5D00AF7E0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA00DC2114BB1A5D00AF7E0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA00DC2414BB1A5D00AF7E0F /* NSObjectMethodsList-Prefix.pch */ = {isa = PBXFileReference; path = "NSObjectMethodsList-Prefix.pch"; sourceTree = "<group>"; };
+		FA00DC2414BB1A5D00AF7E0F /* NSObjectMethodsList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObjectMethodsList-Prefix.pch"; sourceTree = "<group>"; };
 		FA00DC2514BB1A5D00AF7E0F /* NSObjectMethodsList.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NSObjectMethodsList.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
