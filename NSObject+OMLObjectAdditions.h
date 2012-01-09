@@ -13,6 +13,7 @@
 - (NSArray *)objectSelectors;
 - (void)addSelector:(SEL)selector withImplementation:(IMP)implementation andTypes:(const char *)types;
 - (NSArray *)objectIvars;
+- (NSArray *)objectProperties;
 - (NSArray *)objectProtocols;
 
 @end

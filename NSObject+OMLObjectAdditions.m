@@ -43,6 +43,19 @@
 	return ivars;
 }
 
+- (NSArray *)objectProperties {
+    unsigned int propertyCount = 0;
+    objc_property_t *propertyList = class_copyPropertyList(object_getClass(self), &propertyCount);
+    NSMutableArray *properties = [NSMutableArray arrayWithCapacity:propertyCount]; 
+    for (unsigned int i = 0; i < propertyCount; i++) { 
+        const char *propertyName = property_getName(propertyList[i]);
+        NSString *property = [NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding];
+        [properties addObject:property];
+    }
+    free(propertyList); 
+    return properties;
+}
+
 - (NSArray *)objectProtocols {
     unsigned int protocolCount = 0;
     Protocol **protocolList = class_copyProtocolList(object_getClass(self), &protocolCount);
