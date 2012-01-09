@@ -43,6 +43,7 @@
 		FA00DC3314BB278900AF7E0F /* NSObject+OMLObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OMLObjectAdditions.m"; sourceTree = "<group>"; };
 		FA00DC3514BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OMLParentObject+OMLParentObjectAdditions.h"; path = "NSObjectMethodsList/OMLParentObject+OMLParentObjectAdditions.h"; sourceTree = "<group>"; };
 		FA00DC3614BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OMLParentObject+OMLParentObjectAdditions.m"; path = "NSObjectMethodsList/OMLParentObject+OMLParentObjectAdditions.m"; sourceTree = "<group>"; };
+		FA00DC3A14BB5E5900AF7E0F /* OMLObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMLObjectProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 				FA00DC2314BB1A5D00AF7E0F /* Supporting Files */,
 				FA00DC3914BB2E4F00AF7E0F /* Objects */,
 				FA00DC3814BB2CF700AF7E0F /* Categories */,
+				FA00DC3B14BB5E5E00AF7E0F /* Protocols */,
 			);
 			path = NSObjectMethodsList;
 			sourceTree = "<group>";
@@ -124,6 +126,14 @@
 			);
 			name = Objects;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		FA00DC3B14BB5E5E00AF7E0F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA00DC3A14BB5E5900AF7E0F /* OMLObjectProtocol.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

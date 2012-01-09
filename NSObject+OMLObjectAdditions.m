@@ -30,4 +30,15 @@
     class_addMethod(objectClass, selector, implementation, types);
 }
 
+- (NSArray *)objectProtocols {
+    unsigned int protocolCount = 0;
+    Protocol **protocolList = class_copyProtocolList(object_getClass(self), &protocolCount);
+    NSMutableArray *protocols = [NSMutableArray arrayWithCapacity: protocolCount]; 
+    for (unsigned int i = 0; i < protocolCount; i++) { 
+        [protocols addObject:NSStringFromProtocol(protocolList[i])]; 
+    }
+    free(protocolList);
+    return protocols;
+}
+
 @end

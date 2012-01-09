@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OMLObjectProtocol.h"
 
-@interface OMLParentObject : NSObject
+@interface OMLParentObject : NSObject <OMLObjectProtocol>
 
 @property (nonatomic, retain) id someParentObject;
 @property (nonatomic, assign) NSInteger someParentNumber;
