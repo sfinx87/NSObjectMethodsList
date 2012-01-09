@@ -30,10 +30,23 @@
     class_addMethod(objectClass, selector, implementation, types);
 }
 
+- (NSArray *)objectIvars {
+    unsigned int ivarCount = 0;
+    Ivar *ivarList = class_copyIvarList(object_getClass(self), &ivarCount); 
+    NSMutableArray *ivars = [NSMutableArray arrayWithCapacity:ivarCount]; 
+    for (unsigned int i = 0; i < ivarCount; i++) {
+        const char *ivarName = ivar_getName(ivarList[i]);
+        NSString *ivar = [NSString stringWithCString:ivarName encoding:NSUTF8StringEncoding];
+        [ivars addObject:ivar];
+    }
+    free(ivarList); 
+	return ivars;
+}
+
 - (NSArray *)objectProtocols {
     unsigned int protocolCount = 0;
     Protocol **protocolList = class_copyProtocolList(object_getClass(self), &protocolCount);
-    NSMutableArray *protocols = [NSMutableArray arrayWithCapacity: protocolCount]; 
+    NSMutableArray *protocols = [NSMutableArray arrayWithCapacity:protocolCount]; 
     for (unsigned int i = 0; i < protocolCount; i++) { 
         [protocols addObject:NSStringFromProtocol(protocolList[i])]; 
     }

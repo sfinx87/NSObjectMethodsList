@@ -12,6 +12,7 @@
 
 @synthesize someParentObject;
 @synthesize someParentNumber;
+@synthesize someParentIvar = _someParentIvar;
 
 - (void)dealloc {
     [someParentObject release];

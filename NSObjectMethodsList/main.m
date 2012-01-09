@@ -20,6 +20,7 @@ int main (int argc, const char * argv[])
         const char *someMethodTypes = [[NSString stringWithFormat: @"%s%s%s%s", @encode(void), @encode(id), @encode(SEL)] UTF8String];
         [parentObject addSelector:@selector(someParentDynamicSelector) withImplementation:(IMP)someMethodIMP andTypes:someMethodTypes];
         NSLog(@"Parent object selectors:%@", [parentObject objectSelectors]);
+        NSLog(@"Parent object ivars:%@", [parentObject objectIvars]);
         NSLog(@"Parent object protocols:%@", [parentObject objectProtocols]);
         [parentObject release];
         OMLChildrenObject *childrenObject = [[OMLChildrenObject alloc] init];
