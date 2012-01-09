@@ -26,6 +26,12 @@ int main (int argc, const char * argv[])
         [parentObject release];
         OMLChildrenObject *childrenObject = [[OMLChildrenObject alloc] init];
         NSLog(@"Children object selectors:%@", [childrenObject objectSelectors]);
+        NSArray *allClasses = [NSObject classes];
+        for (NSString *classString in allClasses) {
+            if ([childrenObject class] == NSClassFromString(classString)) {
+                NSLog(@"Children object class:%@", classString);
+            }
+        }
         [childrenObject release];
     }
     return 0;

@@ -67,4 +67,15 @@
     return protocols;
 }
 
++ (NSArray *)classes {
+    unsigned int classCount = 0;
+    Class *classList = objc_copyClassList(&classCount);
+    NSMutableArray *classes = [NSMutableArray arrayWithCapacity:classCount];
+    for (unsigned int i = 0; i < classCount; i++) { 
+        [classes addObject:NSStringFromClass(classList[i])]; 
+    }
+    free(classList);
+    return classes;
+}
+
 @end

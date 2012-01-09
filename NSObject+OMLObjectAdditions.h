@@ -15,5 +15,6 @@
 - (NSArray *)objectIvars;
 - (NSArray *)objectProperties;
 - (NSArray *)objectProtocols;
++ (NSArray *)classes;
 
 @end
