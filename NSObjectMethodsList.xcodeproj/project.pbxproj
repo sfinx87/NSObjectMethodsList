@@ -35,10 +35,10 @@
 		FA00DC2114BB1A5D00AF7E0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA00DC2414BB1A5D00AF7E0F /* NSObjectMethodsList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObjectMethodsList-Prefix.pch"; sourceTree = "<group>"; };
 		FA00DC2514BB1A5D00AF7E0F /* NSObjectMethodsList.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NSObjectMethodsList.1; sourceTree = "<group>"; };
-		FA00DC2C14BB1B0700AF7E0F /* OMLChildrenObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMLChildrenObject.h; sourceTree = "<group>"; };
-		FA00DC2D14BB1B0700AF7E0F /* OMLChildrenObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMLChildrenObject.m; sourceTree = "<group>"; };
-		FA00DC2F14BB26ED00AF7E0F /* OMLParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMLParentObject.h; sourceTree = "<group>"; };
-		FA00DC3014BB26ED00AF7E0F /* OMLParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMLParentObject.m; sourceTree = "<group>"; };
+		FA00DC2C14BB1B0700AF7E0F /* OMLChildrenObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMLChildrenObject.h; path = NSObjectMethodsList/OMLChildrenObject.h; sourceTree = "<group>"; };
+		FA00DC2D14BB1B0700AF7E0F /* OMLChildrenObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMLChildrenObject.m; path = NSObjectMethodsList/OMLChildrenObject.m; sourceTree = "<group>"; };
+		FA00DC2F14BB26ED00AF7E0F /* OMLParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OMLParentObject.h; path = NSObjectMethodsList/OMLParentObject.h; sourceTree = "<group>"; };
+		FA00DC3014BB26ED00AF7E0F /* OMLParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OMLParentObject.m; path = NSObjectMethodsList/OMLParentObject.m; sourceTree = "<group>"; };
 		FA00DC3214BB278900AF7E0F /* NSObject+OMLObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OMLObjectAdditions.h"; sourceTree = "<group>"; };
 		FA00DC3314BB278900AF7E0F /* NSObject+OMLObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OMLObjectAdditions.m"; sourceTree = "<group>"; };
 		FA00DC3514BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OMLParentObject+OMLParentObjectAdditions.h"; path = "NSObjectMethodsList/OMLParentObject+OMLParentObjectAdditions.h"; sourceTree = "<group>"; };
@@ -88,10 +88,7 @@
 				FA00DC2114BB1A5D00AF7E0F /* main.m */,
 				FA00DC2514BB1A5D00AF7E0F /* NSObjectMethodsList.1 */,
 				FA00DC2314BB1A5D00AF7E0F /* Supporting Files */,
-				FA00DC2F14BB26ED00AF7E0F /* OMLParentObject.h */,
-				FA00DC3014BB26ED00AF7E0F /* OMLParentObject.m */,
-				FA00DC2C14BB1B0700AF7E0F /* OMLChildrenObject.h */,
-				FA00DC2D14BB1B0700AF7E0F /* OMLChildrenObject.m */,
+				FA00DC3914BB2E4F00AF7E0F /* Objects */,
 				FA00DC3814BB2CF700AF7E0F /* Categories */,
 			);
 			path = NSObjectMethodsList;
@@ -114,6 +111,18 @@
 				FA00DC3614BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.m */,
 			);
 			name = Categories;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FA00DC3914BB2E4F00AF7E0F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FA00DC2F14BB26ED00AF7E0F /* OMLParentObject.h */,
+				FA00DC3014BB26ED00AF7E0F /* OMLParentObject.m */,
+				FA00DC2C14BB1B0700AF7E0F /* OMLChildrenObject.h */,
+				FA00DC2D14BB1B0700AF7E0F /* OMLChildrenObject.m */,
+			);
+			name = Objects;
 			path = ..;
 			sourceTree = "<group>";
 		};
