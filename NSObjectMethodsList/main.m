@@ -11,10 +11,14 @@
 #import "OMLParentObject.h"
 #import "OMLChildrenObject.h"
 
+void someMethodIMP(id self, SEL _cmd);
+
 int main (int argc, const char * argv[])
 {
     @autoreleasepool {
         OMLParentObject *parentObject = [[OMLParentObject alloc] init];
+        const char *someMethodTypes = [[NSString stringWithFormat: @"%s%s%s%s", @encode(void), @encode(id), @encode(SEL)] UTF8String];
+        [parentObject addSelector:@selector(someParentDynamicSelector) withImplementation:(IMP)someMethodIMP andTypes:someMethodTypes];
         NSLog(@"Parent object selectors:%@", [parentObject objectSelectors]);
         [parentObject release];
         OMLChildrenObject *childrenObject = [[OMLChildrenObject alloc] init];
@@ -22,5 +26,10 @@ int main (int argc, const char * argv[])
         [childrenObject release];
     }
     return 0;
+}
+
+// an Objective-C method is simply a C function that take at least two arguments — self and _cmd
+void someMethodIMP(id self, SEL _cmd) {
+    // implementation ...
 }
 

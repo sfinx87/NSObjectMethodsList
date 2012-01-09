@@ -12,15 +12,22 @@
 @implementation NSObject (OMLObjectAdditions)
 
 - (NSArray *)objectSelectors {
-    NSMutableArray *selectors = [NSMutableArray array];
     unsigned int methodCount = 0;
     Method *methodList = class_copyMethodList(object_getClass(self), &methodCount);
+    NSMutableArray *selectors = [NSMutableArray arrayWithCapacity:methodCount];
     for(unsigned int i = 0; i < methodCount; i++) {
         const char *selectorName = sel_getName(method_getName(methodList[i]));
         NSString *selector = [NSString stringWithCString:selectorName encoding:NSUTF8StringEncoding];
         [selectors addObject:selector];
     }
+    free(methodList);
     return selectors;
+}
+
+- (void)addSelector:(SEL)selector withImplementation:(IMP)implementation andTypes:(const char *)types {
+    Class objectClass = object_getClass(self);
+    // method_getTypeEncoding(method);
+    class_addMethod(objectClass, selector, implementation, types);
 }
 
 @end
