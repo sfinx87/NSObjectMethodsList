@@ -10,6 +10,10 @@
 		FA00DC1F14BB1A5D00AF7E0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA00DC1E14BB1A5D00AF7E0F /* Foundation.framework */; };
 		FA00DC2214BB1A5D00AF7E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA00DC2114BB1A5D00AF7E0F /* main.m */; };
 		FA00DC2614BB1A5D00AF7E0F /* NSObjectMethodsList.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA00DC2514BB1A5D00AF7E0F /* NSObjectMethodsList.1 */; };
+		FA00DC2E14BB1B0700AF7E0F /* OMLChildrenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA00DC2D14BB1B0700AF7E0F /* OMLChildrenObject.m */; };
+		FA00DC3114BB26ED00AF7E0F /* OMLParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA00DC3014BB26ED00AF7E0F /* OMLParentObject.m */; };
+		FA00DC3414BB278A00AF7E0F /* NSObject+OMLObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA00DC3314BB278900AF7E0F /* NSObject+OMLObjectAdditions.m */; };
+		FA00DC3714BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA00DC3614BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,14 @@
 		FA00DC2114BB1A5D00AF7E0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA00DC2414BB1A5D00AF7E0F /* NSObjectMethodsList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObjectMethodsList-Prefix.pch"; sourceTree = "<group>"; };
 		FA00DC2514BB1A5D00AF7E0F /* NSObjectMethodsList.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NSObjectMethodsList.1; sourceTree = "<group>"; };
+		FA00DC2C14BB1B0700AF7E0F /* OMLChildrenObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMLChildrenObject.h; sourceTree = "<group>"; };
+		FA00DC2D14BB1B0700AF7E0F /* OMLChildrenObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMLChildrenObject.m; sourceTree = "<group>"; };
+		FA00DC2F14BB26ED00AF7E0F /* OMLParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMLParentObject.h; sourceTree = "<group>"; };
+		FA00DC3014BB26ED00AF7E0F /* OMLParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMLParentObject.m; sourceTree = "<group>"; };
+		FA00DC3214BB278900AF7E0F /* NSObject+OMLObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OMLObjectAdditions.h"; sourceTree = "<group>"; };
+		FA00DC3314BB278900AF7E0F /* NSObject+OMLObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OMLObjectAdditions.m"; sourceTree = "<group>"; };
+		FA00DC3514BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "OMLParentObject+OMLParentObjectAdditions.h"; path = "NSObjectMethodsList/OMLParentObject+OMLParentObjectAdditions.h"; sourceTree = "<group>"; };
+		FA00DC3614BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "OMLParentObject+OMLParentObjectAdditions.m"; path = "NSObjectMethodsList/OMLParentObject+OMLParentObjectAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,11 @@
 				FA00DC2114BB1A5D00AF7E0F /* main.m */,
 				FA00DC2514BB1A5D00AF7E0F /* NSObjectMethodsList.1 */,
 				FA00DC2314BB1A5D00AF7E0F /* Supporting Files */,
+				FA00DC2F14BB26ED00AF7E0F /* OMLParentObject.h */,
+				FA00DC3014BB26ED00AF7E0F /* OMLParentObject.m */,
+				FA00DC2C14BB1B0700AF7E0F /* OMLChildrenObject.h */,
+				FA00DC2D14BB1B0700AF7E0F /* OMLChildrenObject.m */,
+				FA00DC3814BB2CF700AF7E0F /* Categories */,
 			);
 			path = NSObjectMethodsList;
 			sourceTree = "<group>";
@@ -86,6 +103,18 @@
 				FA00DC2414BB1A5D00AF7E0F /* NSObjectMethodsList-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA00DC3814BB2CF700AF7E0F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FA00DC3214BB278900AF7E0F /* NSObject+OMLObjectAdditions.h */,
+				FA00DC3314BB278900AF7E0F /* NSObject+OMLObjectAdditions.m */,
+				FA00DC3514BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.h */,
+				FA00DC3614BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.m */,
+			);
+			name = Categories;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA00DC2214BB1A5D00AF7E0F /* main.m in Sources */,
+				FA00DC2E14BB1B0700AF7E0F /* OMLChildrenObject.m in Sources */,
+				FA00DC3114BB26ED00AF7E0F /* OMLParentObject.m in Sources */,
+				FA00DC3414BB278A00AF7E0F /* NSObject+OMLObjectAdditions.m in Sources */,
+				FA00DC3714BB2C7E00AF7E0F /* OMLParentObject+OMLParentObjectAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
