@@ -15,6 +15,12 @@
 
 @end
 
+@interface OMLChildrenObject ()
+
+- (void)someChildrenExtensionMethod:(id)someObject;
+
+@end
+
 @implementation OMLChildrenObject
 
 @synthesize someChilrenObject;
@@ -24,6 +30,9 @@
 }
 
 - (void)someChildrenUndeclaredMethod {
+}
+
+- (void)someChildrenExtensionMethod:(id)someObject {
 }
 
 - (void)dealloc {
